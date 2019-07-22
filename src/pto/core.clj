@@ -2,7 +2,7 @@
   (:gen-class))
 
 (defn balance
-  []
+  [& now]
   0)
 
 (defn -main
