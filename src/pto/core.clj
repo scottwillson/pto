@@ -9,8 +9,10 @@
 
 (defn balance
   ([start-date now]
-    (* 0.22
-      (days start-date now)))
+    (int
+      (Math/floor
+        (* 0.22
+          (days start-date now)))))
 
   ([start-date]
     (balance start-date (java-time/local-date)))
