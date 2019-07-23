@@ -7,12 +7,11 @@
                            [compojure "1.6.1"]
                            [hiccup "1.0.5"]
                            [ring/ring-defaults "0.3.2"]
-                           [org.clojure/clojure "1.10.0"]
-                           [org.clojure/java.jdbc "0.7.9"]]
+                           [org.clojure/clojure "1.10.0"]]
             :main ^:skip-aot pto.core
             :plugins [[lein-ring "0.12.5"]]
             :ring {:handler pto.handler/app}
             :target-path "target/%s"
             :profiles {:uberjar {:aot :all}
                        :dev {:dependencies [[javax.servlet/servlet-api "2.5"]
-                                            [ring/ring-mock "0.3.2"]]}})
+                                            [ring/ring-mock "0.4.0"]]}})
